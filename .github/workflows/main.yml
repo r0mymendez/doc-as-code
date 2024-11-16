@@ -23,7 +23,6 @@ jobs:
       # Intall dependencies and libraries
       - name: Install dependencies
         run: |
-          pip install -r requirements.txt
           pip install mkdocs mkdocs-material
 
       # Buld the site
