@@ -1,6 +1,6 @@
-# ¿Qué es Synthea?
+# 🟣 What is Synthea?
 
-Synthea es un generador de datos sintéticos de pacientes que simula registros médicos realistas. Es útil para entrenamiento de modelos de machine learning en el campo de la salud.
+Synthea is a synthetic patient data generator that simulates realistic medical records. It is useful for training machine learning models in the healthcare field.
 
 ```mermaid
 mindmap
@@ -26,5 +26,5 @@ mindmap
       
 ```
 
-> Datos actualizados al {{database.version_date}} con la version {{database.version}}
+> Data updated as of {{database.version_date}} with version {{database.version}}.
 
