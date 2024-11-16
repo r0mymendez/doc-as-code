@@ -1,33 +1,46 @@
-name: Doc-as-code  Mkdocs
+name: Doc-as-code Mkdocs
+
 on:
   push:
     branches:
       - main
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
+
     steps:
-      - name: clone the repository
+      # Clone the repository
+      - name: Clone the repository
         uses: actions/checkout@v4.2.2
-        
-      - name: python version install
+
+      # Install the python verion
+      - name: Python version install
         uses: actions/setup-python@v5.3.0
         with:
           python-version: '3.11'
-          
-      - name: install libraries
+
+      # Install the libraries
+      - name: Install libraries
         run: |
           pip install mkdocs mkdocs-material
-          
-      - name: create site
+
+      # Create mkdocs project
+      - name: Create site
         run: |
-          mkdocs new project |
-          cd project
-        
-      - name: build site
-        run: mkdocs build
-        
-      - name: copy site
-        run: echo 'copy files'
-        
-      
+          mkdocs new project 
+
+      # Change of directory 
+      - name: Navigate to project directory
+        run: |
+          cd project  
+
+      # Build mkdocs site
+      - name: Build site
+        run: |
+          mkdocs build  
+
+      # Copy the site files 
+      - name: Copy site
+        run: |
+          echo 'Copying files'  # Aquí puedes copiar los archivos si es necesario
