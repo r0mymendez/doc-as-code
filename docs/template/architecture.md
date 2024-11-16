@@ -1,5 +1,5 @@
-# Arquitectura en Amazon Web Services
+# 🟣 Architecture in Amazon Web Services
 
-Este flujo ilustra cómo se cargan, transforman y modelan los datos de Synthea en un entorno de AWS.
+This flow illustrates how Synthea data is loaded, transformed, and modeled in an AWS environment.
 
 ![Arquitectura en AWS](img/aws_data_processing_pipeline.png)

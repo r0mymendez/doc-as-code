@@ -1,5 +1,5 @@
-# Glosario
+# 🟣 Glossary
 
-- **Synthea**: Generador de datos de salud sintéticos.
-- **AWS (Amazon Web Services)**: Plataforma de servicios en la nube utilizada para la arquitectura de este proyecto.
-- **ETL (Extract, Transform, Load)**: Proceso de carga y transformación de datos previo al entrenamiento del modelo.
+- **Synthea**: Synthetic health data generator.  
+- **AWS (Amazon Web Services)**: Cloud services platform used for the architecture of this project.  
+- **ETL (Extract, Transform, Load)**: Process of loading and transforming data prior to model training.  

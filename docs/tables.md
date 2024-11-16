@@ -5,13 +5,13 @@ status: new
 tags: [Blue, Medications,Conditions]
 ---
 
-# Tablas en Synthea
+# 🟣 Synthea Tables
 
-| Tabla         | Descripción                                        |
+| Tables         | Descriptions                                        |
 |---------------|----------------------------------------------------|
-| Patients     | Contiene información demográfica y médica básica.  |
-| Medications    | Registros de medicamentos prescritos.              |
-| Conditions  | Enfermedades y condiciones clínicas documentadas.  |
+| Patients     | Contains demographic and basic medical information.|
+| Medications  | Records of prescribed medications.                 |
+| Conditions   | Diseases and documented clinical conditions.       |
 
 ```mermaid
 erDiagram
