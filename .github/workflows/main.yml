@@ -1,4 +1,4 @@
-name: Doc-as-code Mkdocs
+name: Doc-as-Code MkDocs
 
 on:
   push:
@@ -10,50 +10,33 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # Clone the repository
-      - name: Clone the repository
+      # clone the respository
+      - name: Checkout code
         uses: actions/checkout@v4.2.2
 
-      # Install the python verion
-      - name: Python version install
+      # Python configuration
+      - name: Set up Python
         uses: actions/setup-python@v5.3.0
         with:
           python-version: '3.11'
 
-      # Install the libraries
-      - name: Install libraries
+      # Intall dependencies and libraries
+      - name: Install dependencies
         run: |
+          pip install -r requirements.txt
           pip install mkdocs mkdocs-material
 
-      # Create mkdocs project
-      - name: Create site
-        run: |
-          mkdocs new project 
-
-      # Change of directory 
-      - name: Navigate to project directory
-        run: |
-          cd project  
-
-      # Build mkdocs site
+      # Buld the site
       - name: Build site
-        working-directory: project
         run: |
-          mkdocs build  
+          mkdocs build
 
-      - name: Configure AWS credentials
-        uses: aws-actions/configure-aws-credentials@v3
-        with:
-          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          aws-region: us-east-1
-
-      # Copiar archivos al bucket de S3
-      - name: Upload to S3
+      # Upload the s3 files
+      - name: Deploy to S3
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_DEFAULT_REGION: 'us-east-1' # Cambia según tu región
         run: |
-          aws s3 cp project/site s3://doc-as-code-mkdocs-test --recursive
-          
-      # Copy the site files 
-      - name: Copy site
-        run: |
-          echo 'Copying files'  # Aquí puedes copiar los archivos si es necesario
+          aws s3 rm s3://doc-as-code-mkdocs --recursive
+          aws s3 cp ./site s3://doc-as-code-mkdocs --recursive
