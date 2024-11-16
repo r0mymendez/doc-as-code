@@ -1,0 +1,31 @@
+-- name: get_example_patients
+SELECT 
+    Id,
+    BIRTHDATE,
+    DEATHDATE,
+    SSN,
+    DRIVERS,
+    PASSPORT,
+    PREFIX,
+    FIRST,
+    LAST,
+    SUFFIX,
+    MAIDEN,
+    MARITAL,
+    RACE,
+    ETHNICITY,
+    GENDER,
+    BIRTHPLACE,
+    ADDRESS,
+    CITY,
+    STATE,
+    COUNTY,
+    FIPS,
+    ZIP,
+    LAT,
+    LON,
+    HEALTHCARE_EXPENSES,
+    HEALTHCARE_COVERAGE,
+    INCOME
+FROM PATIENTS 
+    LIMIT 3;
