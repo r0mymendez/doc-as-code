@@ -37,6 +37,7 @@ jobs:
 
       # Build mkdocs site
       - name: Build site
+        working-directory: project
         run: |
           mkdocs build  
 
