@@ -2,9 +2,9 @@ site_name: Hospital Documentation
 
 nav:
   - Home: index.md
-  - Tablas de Synthea: tables.md
-  - Arquitectura en AWS: architecture.md
-  - Glosario: glossary.md
+  - Synthea Tables: tables.md
+  - AWS Architecture: architecture.md
+  - Glossary: glossary.md
 markdown_extensions:
   - pymdownx.superfences:
       custom_fences:
