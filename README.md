@@ -86,7 +86,7 @@ In this tutorial, I will leverage **Jinja2** to handle dynamic content in our do
 
 * For the **introduction** page, I will display the date of the last update of the documentation, which will be pulled from a database table.
 * For the **tables** page, I will showcase the first few results of a dataframe query to demonstrate how a data table appears, using **Jinja2** for dynamic rendering.
-* The **architecture** page explains the architecture supporting this functionality, and further details can be found in another repository called [doc-as-diagram](https://github.com/r0mymendez/doc-as-diagrams), which provides the blueprint for implementation.
+* The **architecture** page explains the architecture supporting this functionality, and further details can be found in another repository called [diagram-as-code](https://github.com/r0mymendez/diagram-as-code), which provides the blueprint for implementation.
 
 
 
